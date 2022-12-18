@@ -398,6 +398,7 @@ class TSIIndicator(IndicatorMixin):
 
 # st.video(video_bytes)
 # st.sidebar.markdown('##### Crypto Dashboard')
+st.sidebar.title('Crypto Dashboard :moneybag:')
 
 from PIL import Image 
 image = Image.open('crypto_coins2.png')
