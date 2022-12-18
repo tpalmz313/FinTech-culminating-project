@@ -397,18 +397,11 @@ class TSIIndicator(IndicatorMixin):
 # video_bytes = video_file.read()
 
 # st.video(video_bytes)
-st.sidebar.title('Crypto Dashboard')
+# st.sidebar.markdown('##### Crypto Dashboard')
 
-from PIL import Image
+from PIL import Image 
 image = Image.open('crypto_coins2.png')
 st.sidebar.image(image)
-
-# image = Image.open('banner.jpg')
-# st.image(image)
-
-# Add in location to select image.
-# st.sidebar.title('Crypto Dashboard')
-
 
 option = st.sidebar.selectbox('Select a Cryptocurrency', ('BTC-USD','ETH-USD','USDT-USD','USDC-USD','BNB-USD','XRP-USD','BUSD-USD','DOGE-USD','ADA-USD','MATIC-USD','DOT-USD','DAI-USD','WTRX-USD','LTC-USD','SOL-USD','TRX-USD','SHIB-USD','HEX-USD','UNI7083-USD','STETH-USD','AVAX-USD','LEO-USD','LINK-USD','WBTC-USD','TON11419-USD'))
 
@@ -417,7 +410,7 @@ import datetime
 
 today = datetime.date.today()
 before = today - datetime.timedelta(days=730)
-start_date = st.sidebar.date_input('Start date', before)
+start_date = st.sidebar.date_input('Start date', before) 
 end_date = st.sidebar.date_input('End date', today)
 if start_date < end_date:
     st.sidebar.success('Start date: `%s`\n\nEnd date:`%s`' % (start_date, end_date))
@@ -473,7 +466,7 @@ st.line_chart(roc)
 st.markdown("The Rate of Change (ROC) indicator, which is also referred to as simply Momentum, is a pure momentum oscillator that measures the percent change in price from one period to the next.")
 st.markdown(" ")
 st.markdown(" ")
-st.markdown("##### 15 Day Snapshot")
+st.markdown("##### 15 Day Snapshot :chart_with_upwards_trend:")
 st.write(option)
 st.dataframe(df.tail(15))
 
