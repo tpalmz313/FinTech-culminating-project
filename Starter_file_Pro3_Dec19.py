@@ -274,7 +274,7 @@ class TSIIndicator(IndicatorMixin):
 st.sidebar.title('Crypto Dashboard :moneybag:')
 url = 'https://finance.yahoo.com/crypto/?count=25&offset=0'
 
-if st.sidebar.button('yahoo! finance'):
+if st.sidebar.button('Yahoo! Crypto'):
     webbrowser.open_new_tab(url)
     
 # from PIL import Image 
@@ -386,6 +386,7 @@ st.markdown("##### 10 Day Snapshot :chart_with_upwards_trend:")
 st.write(option)
 st.dataframe(df.tail(10))
 progress_bar = st.progress(0)
+
 ################
 # Download csv #
 ################
